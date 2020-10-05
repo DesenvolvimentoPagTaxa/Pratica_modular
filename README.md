@@ -28,4 +28,4 @@ Para gerar novo arquivo com estrutura
 
 → slidy generate module modules/teste -c
 
-                                ↑ Nome do arquivo
+                                  ↑ Nome do arquivo
