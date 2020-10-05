@@ -24,10 +24,14 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
               Center(child: Text(controller.value.toString())),
               Center(
                 child: RaisedButton(
+                  child: Text('Ir para Page A'),
+                  onPressed: () => Modular.to.pushNamed('/pagea'),
+                ),
+              ),
+              Center(
+                child: RaisedButton(
                   child: Text('Ir para Page B'),
-                  onPressed: () {
-                    Modular.to.pushNamed('/pageb', arguments: controller.value);
-                  },
+                  onPressed: () => Modular.to.pushNamed('/pageb', arguments: controller.value),
                 ),
               )
             ],

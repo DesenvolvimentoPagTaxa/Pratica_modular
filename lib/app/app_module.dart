@@ -1,3 +1,4 @@
+import 'package:modular_ex/app/modules/pagea/pagea_module.dart';
 import 'app_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class AppModule extends MainModule {
   List<ModularRouter> get routers => [
         //load module
         ModularRouter(Modular.initialRoute, module: HomeModule()),
+        ModularRouter('/pagea', module: PageaModule()),
         ModularRouter('/pageb', module: PagebModule()),
       ];
 
