@@ -49,6 +49,17 @@ mixin _$PagebController on _PagebControllerBase, Store {
   }
 
   @override
+  void decrement() {
+    final _$actionInfo = _$_PagebControllerBaseActionController.startAction(
+        name: '_PagebControllerBase.decrement');
+    try {
+      return super.decrement();
+    } finally {
+      _$_PagebControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 text: ${text}

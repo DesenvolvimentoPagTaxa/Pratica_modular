@@ -29,3 +29,7 @@ Para gerar novo arquivo com estrutura
 → slidy generate module modules/teste -c
 
                                     ↑ Nome do arquivo
+
+Para gerar .g.dart usando slidy(pode ser criado pubspec.yaml)
+
+→ slidy run mbx_wth

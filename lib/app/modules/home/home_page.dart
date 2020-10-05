@@ -4,10 +4,6 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'home_controller.dart';
 
 class HomePage extends StatefulWidget {
-  final String title;
-
-  const HomePage({Key key, this.title = "Home"}) : super(key: key);
-
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -20,22 +16,18 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
     return Observer(
       builder: (_) {
         return Scaffold(
-          appBar: AppBar(
-            title: Text(widget.title),
-          ),
+          appBar: AppBar(title: Text('Home')),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Center(
-                child: Text(controller.value.toString()),
-              ),
+              Center(child: Text(controller.value.toString())),
               Center(
                 child: RaisedButton(
+                  child: Text('Ir para Page B'),
                   onPressed: () {
-                    Modular.to.pushNamed('/pageb');
+                    Modular.to.pushNamed('/pageb', arguments: controller.value);
                   },
-                  child: Text('Page B'),
                 ),
               )
             ],

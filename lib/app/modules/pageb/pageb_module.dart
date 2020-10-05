@@ -1,6 +1,5 @@
 import 'pageb_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-
 import 'pageb_page.dart';
 
 class PagebModule extends ChildModule {
@@ -11,7 +10,8 @@ class PagebModule extends ChildModule {
 
   @override
   List<ModularRouter> get routers => [
-        ModularRouter(Modular.initialRoute, child: (_, args) => PagebPage()),
+        //Para passar em parametro ↓
+        ModularRouter(Modular.initialRoute, child: (_, args) => PagebPage(args.data)),
       ];
 
   static Inject get to => Inject<PagebModule>.of();
