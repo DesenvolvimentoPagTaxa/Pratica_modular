@@ -26,7 +26,7 @@ Para criar template de um projeto existente, e escolher provider que irá utiliz
 
 Para gerar novo arquivo com estrutura
 
-→ slidy generate module modules/teste -c
+→ slidy generate module modules/teste -c OR slidy g m modules/teste -c
 
                                     ↑ Nome do arquivo
 
