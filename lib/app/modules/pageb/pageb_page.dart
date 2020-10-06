@@ -1,3 +1,4 @@
+import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -25,22 +26,25 @@ class _PagebPageState extends ModularState<PagebPage, PagebController> {
           appBar: AppBar(
             title: Text('Valor Home: ' + hController.value.toString()),
           ),
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Center(child: Text(controller.text)),
-              Padding(padding: EdgeInsets.only(left: 30, right: 30), child: Divider(color: Colors.grey)),
-              Center(child: Text('Valor em parametro: ' + widget.valu.toString())),
-              Padding(padding: EdgeInsets.only(left: 30, right: 30), child: Divider(color: Colors.grey)),
-              Center(
-                child: RaisedButton(
-                  onPressed: () => controller.decrement(),
-                  child: Text('Decrementar'),
-                ),
-              )
-            ],
-          ),
+          body: ColorfulSafeArea(
+              color: Colors.white.withOpacity(0.7),
+              overflowRules: OverflowRules.all(true),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Center(child: Text(controller.text)),
+                  Padding(padding: EdgeInsets.only(left: 30, right: 30), child: Divider(color: Colors.grey)),
+                  Center(child: Text('Valor em parametro: ' + widget.valu.toString())),
+                  Padding(padding: EdgeInsets.only(left: 30, right: 30), child: Divider(color: Colors.grey)),
+                  Center(
+                    child: RaisedButton(
+                      onPressed: () => controller.decrement(),
+                      child: Text('Decrementar'),
+                    ),
+                  )
+                ],
+              )),
           floatingActionButton: FloatingActionButton(
             onPressed: () => controller.change(),
             child: Icon(Icons.refresh),
