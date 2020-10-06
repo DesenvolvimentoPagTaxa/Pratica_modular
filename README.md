@@ -20,7 +20,7 @@ EX→ C:\Users\userName\AppData\Local\Pub\Cache\bin
 
 → slidy --version
 
-Para Criar Template, e escolher provider que irá utilizar
+Para criar template de um projeto existente, e escolher provider que irá utilizar
 
 → slidy start
 
