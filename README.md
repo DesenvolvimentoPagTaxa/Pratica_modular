@@ -11,7 +11,7 @@ Depois executar ↓ no cmd
 
 → pub global activate slidy
 
-E adicionar slidy.bat na ambiente variável
+E adicionar slidy.bat na variável ambiente
 
 EX→ C:\Users\userName\AppData\Local\Pub\Cache\bin
 
